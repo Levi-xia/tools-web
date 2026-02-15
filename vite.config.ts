@@ -4,6 +4,8 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
 import {seoperender} from "./ssr.config";
 
+const isCloudflare = process.env.CF_PAGES === '1';
+
 // https://vitejs.dev/config/
 export default defineConfig(({command, mode}) => {
   let env = loadEnv(mode, process.cwd())
@@ -19,7 +21,7 @@ export default defineConfig(({command, mode}) => {
         // Specify symbolId format
         symbolId: 'icon-[dir]-[name]',
       }),
-      seoperender()
+      !isCloudflare && seoperender()
     ],
     resolve: {
       alias: {
