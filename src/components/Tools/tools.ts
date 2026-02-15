@@ -141,15 +141,15 @@ export function getToolsCate() {
       title: '文本处理',
       icon: '',
       list: [
-        {
-          id: 1,
-          title: '文本对比',
-          logo: '/images/logo/diff.png',
-          desc: '文本差异比对支持中文、英文、代码比对',
-          url: '/diff/',
-          cateId: 3,
-          cate: '文本处理'
-        },
+        // {
+        //   id: 1,
+        //   title: '文本对比',
+        //   logo: '/images/logo/diff.png',
+        //   desc: '文本差异比对支持中文、英文、代码比对',
+        //   url: '/diff/',
+        //   cateId: 3,
+        //   cate: '文本处理'
+        // },
         {
           id: 1,
           title: 'markdown编辑器',
